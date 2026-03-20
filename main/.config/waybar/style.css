@@ -1,0 +1,213 @@
+* {
+    font-family: "Ubuntu Nerd Font";
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+#window {
+    font-weight: bold;
+    font-family: "Ubuntu Nerd Font";
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: #a37800;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: white;
+    border-top: 2px solid transparent;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#mode {
+    background-color: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#tray,
+#mode,
+#power-profiles-daemon {
+    margin: 0 3px;
+    padding-left: 3px;
+}
+
+#clock {
+}
+
+#power-profiles-daemon {
+}
+
+#power-profiles-daemon.performance {
+    color: #f53c3c;
+}
+
+#power-profiles-daemon.balanced {
+    color: #2980b9;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #2ecc71;
+}
+
+#custom-media {
+}
+
+#temperature {
+    color: white
+}
+
+#temperature.warning {
+    color: #eb4d4b;
+}
+
+#temperature.critical {
+    color: #E94D4C;
+}
+
+#tray {
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
+
+#language {
+    color: white;
+    padding: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    color: white;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#custom-weather {
+    color: white;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    font-family: "Ubuntu Nerd Font";
+}
+
+@keyframes blink-condition {
+    to {
+        background-color: #dedede;
+    }
+}
+
+#custom-weather.hot {
+    background-color: #dd5050;
+}
+
+#custom-weather.cold {
+    background-color: #5050dd;
+}
+
+#custom-weather.rain,
+#custom-weather.snow,
+#custom-weather.smoke {
+    color: #dedede;
+    animation-name: blink-condition;
+    animation-duration: 2s;
+}
+
+#custom-gpu-usage {
+}
+
+#workspaces,
+#pulseaudio,
+#group-hw,
+#group-time,
+#language,
+#group-tray {
+    border-left-width: 5px;
+    border-left-style: solid;
+}
+
+#workspaces {
+    border-left-color: #F38BA8;
+}
+
+#pulseaudio {
+    border-left-color: #A6E3A1;
+    padding-left: 5px;
+}
+
+#custom-media {
+    border-left-color: #F38BA8;
+}
+
+#group-hw {
+    border-left-color: #FFC783;
+}
+
+#group-time {
+    border-left-color: #89B4FA;
+}
+
+#language {
+    border-left-color: #F5C2E7;
+}
+
+#group-tray {
+    border-left-color: #94E2D5;
+}
+
