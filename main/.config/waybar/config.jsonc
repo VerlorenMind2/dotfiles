@@ -135,6 +135,8 @@
 	"on-click": "~/.config/waybar/scripts/weather/get_weather.rb --next", // Cycle views
 	"interval": 900 // Every 15 minutes
     },
+
+// Groups
     "group/group-hw": {
 	"orientation": "inherit",
 	"modules": [
